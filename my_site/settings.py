@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure--1eha!f)*mf_q4xpbm_%+0(%u+pd50fbsjbp&pf6lpq$ch_c8)
 DEBUG =  True
 
 ALLOWED_HOSTS = [
-    # getenv("APP_HOST")
+    # "blogwebsitearun.herokuapp.com"
 ]
 
 
