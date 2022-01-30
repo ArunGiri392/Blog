@@ -18,13 +18,6 @@ h3 {
   font-family: 'Lato', sans-serif;
   font-weight: bold;
 }
-#main-navigation nav a{
-    color:green;
-    font-size: 25px;
-    float:right;
-    margin-top: -50px;
-    margin-right: 30px;
-}
 
 #main-navigation {
   width: 100%;
@@ -40,10 +33,14 @@ h3 {
 
 #main-navigation a {
   text-decoration: none;
-  color: white;
+  color: pink;
   font-weight: bold;
+  margin-left:16px;
+ 
 }
-
+#main-navigation nav a{
+  font-size:20px;
+}
 #main-navigation a:hover,
 #main-navigation a:active {
   color: #cf79f1;
@@ -51,5 +48,5 @@ h3 {
 
 #main-navigation h1 a:hover,
 #main-navigation h1 a:active {
-  color:black;
+  color: white;
 }

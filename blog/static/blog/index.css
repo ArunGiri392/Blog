@@ -81,3 +81,7 @@
   font-size: 1.5rem;
   color: #353535;
 }
+#about a {
+  color:yellow;
+  font-size:12px;
+}

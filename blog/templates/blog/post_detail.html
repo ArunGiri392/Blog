@@ -16,8 +16,26 @@
 
         </h2>
         <h3>
-          {{post.tag.caption}}
+            {% for tag in tags %}
+             {{tag.caption}}
+            {% endfor %}
         </h3>
+        <div>
+            <div id="read-later">
+            <form action="{% url "read-later" %}" method="POST">
+                {% csrf_token %}
+            <input type="hidden" value="{{post.id}}" name="post_id">
+            <button>
+                {% if saved_for_later %}
+                  Remove from "Read later list"
+
+                {% else %}
+                Read Later
+                {% endif %}
+                
+            </button>
+            </form>
+        </div>
         <article>
             <img src="{{post.image_name.url}}" alt="{{post.title}}"/>
             <adress> {{post.author}} </adress>
