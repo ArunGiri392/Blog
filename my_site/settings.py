@@ -123,7 +123,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-# STATIC_ROOT = BASE_DIR/ "staticfiles" # it helps to collect all the static files and automatically move to staticfiles folder.(For deployment)
+STATIC_ROOT = BASE_DIR/ "staticfiles" # it helps to collect all the static files and automatically move to staticfiles folder.(For deployment)
 STATIC_URL = 'static/' # helping django to know that there is a static files inside the particular app and django will find out and helps in rendering.
 STATICFILES_DIRS = [
     BASE_DIR / "static/"
