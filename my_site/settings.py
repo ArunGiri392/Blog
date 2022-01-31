@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from os import getenv
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure--1eha!f)*mf_q4xpbm_%+0(%u+pd50fbsjbp&pf6lpq$ch_c8)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = getenv("IS_PRODUCTION", True)
-DEBUG =  True
+DEBUG =  False
 
 ALLOWED_HOSTS = [
     "blogwebsitearun.herokuapp.com",
