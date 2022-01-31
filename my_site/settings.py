@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from os import getenv
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -143,6 +144,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# if 'DATABASE_URL' in os.environ: #means heroku
-#     import dj_database_url
-#     DATABASES = {'default': dj_database_url.config()} 
+if 'DATABASE_URL' in os.environ: #means heroku
+    import dj_database_url
+    DATABASES = {'default': dj_database_url.config()} 
