@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure--1eha!f)*mf_q4xpbm_%+0(%u+pd50fbsjbp&pf6lpq$ch_c8)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = getenv("IS_PRODUCTION", True)
-DEBUG =  False
+DEBUG =  True
 
 ALLOWED_HOSTS = [
     "blogwebsitearun.herokuapp.com",
@@ -128,27 +128,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # it helps to collect all the static files and automatically move to staticfiles folder.(For deployment)
-# STATIC_URL = 'static/' # helping django to know that there is a static files inside the particular app and django will find out and helps in rendering.
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static/"
-# ]#Your project will probably also have static assets that aren’t tied to a particular app. In addition to using a static/ directory inside your apps, you can define a list of directories (STATICFILES_DIRS) in your settings file where Django will also look for static files.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # it helps to collect all the static files and automatically move to staticfiles folder.(For deployment)
+STATIC_URL = 'static/' # helping django to know that there is a static files inside the particular app and django will find out and helps in rendering.
+STATICFILES_DIRS = [
+    BASE_DIR / "static/"
+]#Your project will probably also have static assets that aren’t tied to a particular app. In addition to using a static/ directory inside your apps, you can define a list of directories (STATICFILES_DIRS) in your settings file where Django will also look for static files.
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
-# MEDIA_URL = "/files/"
+MEDIA_URL = "/files/"
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -158,4 +151,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     import dj_database_url
 #     DATABASES = {'default': dj_database_url.config()} 
 
-django_heroku.settings(locals())
