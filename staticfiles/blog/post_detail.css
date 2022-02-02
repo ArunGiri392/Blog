@@ -24,7 +24,10 @@ body {
   font-size: 4.5rem;
   margin-bottom: 0.25rem;
 }
-
+#summary h3 {
+  color: green;
+  
+}
 #summary article {
   position: absolute;
   top: 2rem;
