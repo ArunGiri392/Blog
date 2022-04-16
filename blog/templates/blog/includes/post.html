@@ -4,8 +4,8 @@
       <a href="{% url "post-detail" post.slug%}">
         <img src="{{post.image_name.url}}" alt="{{post.title}}"/>
         <div class="post_content">
-          <h3><span style="color:green;font-weight:bold"> {{ post.title }}</span> </h3>
-          <p><span style="color:green;font-weight:bold">{{post.excerpt}}</span> </p>
+          <h3> {{ post.title }} </h3>
+          <p>{{post.excerpt}}</p>
         </div>
       </a>
     </article>

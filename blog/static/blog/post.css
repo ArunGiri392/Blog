@@ -1,4 +1,5 @@
 .post {
+  /* background-color: red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +18,8 @@
 .post a:hover,
 .post a:active {
   transform: scale(1.1);
-  background-color: #390281;
+  /* background-color: #390281; */
+  background-color: #cf79f1;
   color: white;
 }
 

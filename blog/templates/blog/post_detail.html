@@ -36,6 +36,22 @@
             </button>
             </form>
         </div>
+
+        <div class="stars">
+            <a>⭐</a>
+            <a>⭐</a>
+            <a>⭐</a>
+            <a>⭐</a>
+            <a>⭐</a>
+   
+        </div>
+
+
+        {{ratings}}
+
+
+
+
         <article>
             <img src="{{post.image_name.url}}" alt="{{post.title}}"/>
             <adress> {{post.author}} </adress>
@@ -45,6 +61,8 @@
 
     </section>
 
+    
+
     <main>
         <div id="arun">
         
@@ -53,6 +71,8 @@
         
     </main>
 
+
+    {% comment %} showing the comments of the user which is retrieved from the database. {% endcomment %}
     <section id="comments">
         <h1>User comments</h1>
         <ul>
@@ -64,6 +84,12 @@
             {% endfor %}
         </ul> 
     </section>
+
+
+
+
+
+  {% comment %} form for user to make  a comments. {% endcomment %}
     <section  id="comment-form">
         <h2>Your comment </h2>
         <form action="{% url "post-detail" post.slug %}" method="POST">
@@ -81,5 +107,6 @@
     </section>
 
     </main>
+    <script src="{% static "blog/index.js" %}"></script>
 
 {% endblock %}

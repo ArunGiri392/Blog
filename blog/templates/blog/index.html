@@ -7,9 +7,7 @@
    {% block css_files%} 
    <link rel="stylesheet" href="{% static "blog/post.css" %}"/>
    <link rel="stylesheet" href="{% static "blog/index.css" %}"/>
-  
-
-   {% endblock%}
+  {% endblock%}
   
    {% block content%}
     
@@ -18,25 +16,41 @@
    <section id="welcome">
      <header>
        <img src="{% static "blog/images/arun.jpeg" %}" alt="Arun-Author of the blog"/>
-       <h2> <span style="color:green;font-weight:bold">Arun's Blog</span> </h2>
+       <h2> Welcome to my Blog<h2>
+        <p>Hi, I am  Arun Giri.I am a Sophomore,majoring in Computer Science at Fisk University.You can view my resume <a href="../../static/blog/images/ArunGiri.pdf" download>Here.</a></p>
      </header>
-     <p>Hi, I am  <span style="color:red;font-weight:bold">Arun Giri</span> and I am a <span style="color:red;font-weight:bold">Programmer.</span> </p>
+
+    
    </section>
 
    <section id="latest-posts">
-     <h2><span style="color:red;font-weight:bold">My latest Thoughts</span> </h2>
+     <h2>My Latest Thoughts</h2>
      <ul>
       {% for post in posts%}
       {% include "blog/includes/post.html"%}
       {% endfor %}
       <ul>
    </section>
-   <section id="about">
+
+   {% comment %} <section id="about">
      <h2>About me </h2>
-     <p> <span style="color:green;font-weight:bold">I am a computer science student at Fisk University and I am currently in my sophomore year.</span></p>
-     <a href="https://www.linkedin.com/in/arungiri12/" target=""> <span style="color:brown;font-size:25px;font-weight:bold"> Connect me at Linkedin</span> </a>
-    
-   </section>
+     <p> I am a Sophomore at Fisk Univeristy majoring in Computer Science</p>
+     
+  </section> {% endcomment %}
+
+   <footer>
+    <ul>
+        <li><a target=" " href="https://www.facebook.com/arun.giri.73932/">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/in/arungiri12/">Linkedin</a></li>
+        <li><a href="mailto:arungirii100@gmail.com">Email</a></li>
+        <li><a href="mailto:arungirii100@gmail.com">Instagram</a></li>
+        <li><a target=" " href="https://github.com/ArunGiri392/">Github</a></li>
+       
+
+    </ul>
+
+  </footer>
+  <script src="{% static "blog/index.js" %}"></script>
 
    {% endblock %}
 

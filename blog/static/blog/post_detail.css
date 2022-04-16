@@ -3,7 +3,7 @@ body {
 }
 
 #main-navigation {
-  background-color: #390281;
+  background-color: #D3F8FF;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -13,7 +13,7 @@ body {
   width: 90%;
   max-width: 90rem;
   border-radius: 16px;
-  background-color: #5706c0;
+  background-color:#FFBFDE;
   position: relative;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   height: 22rem;
@@ -202,14 +202,37 @@ main {
   border-bottom: none;
 }
 
-#comments h2,p {
+/* #comments h2,p {
   color: green;
-}
+} */
 #comments h1{
   color:blue;
 }
 
-#arun{
+/* #arun{
   color:green;
   
+} */
+
+
+
+.stars {
+  display:flex;
+}
+
+.stars a{
+  opacity:50%;
+  cursor:pointer;
+  padding:3px;
+}
+.stars:hover a{
+  opacity:100%;
+}
+
+.stars a:hover{
+  opacity:100%;
+}
+
+.stars a:hover ~a{
+  opacity:50%;
 }

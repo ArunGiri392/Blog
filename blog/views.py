@@ -67,6 +67,10 @@ class SinglePostView(View):
     comment_form = CommentForm()
     comments = identified_post.comments.all().order_by("-id")[0:3]
     return render(request, "blog/post_detail.html", {"post": identified_post, "form":comment_form,"comments":comments,"saved_for_later":is_saved_for_later,"tags":identified_post.tag.all()})
+
+  def ratings(request,value):
+    if value == 1:
+      return render(request,"blog/post_detail.html",{"ratings":1})
   
   def post(self,request,slug):
     comment_form = CommentForm(request.POST)
@@ -80,6 +84,10 @@ class SinglePostView(View):
     comment.post = post
     comment.save()
     return HttpResponseRedirect(reverse("post-detail", args=[slug]))
+
+
+
+  
 
   
 class ReadLaterview(View):
@@ -113,3 +121,5 @@ class ReadLaterview(View):
 # class Singlepostview(DetailView):
 #   template_name = "blog/post-detail.html"
 #   model = Post
+def ratings(request):
+  pass
